@@ -11,8 +11,10 @@ public class EmployeeWage {
         int fullDayHr = 8;
         int halfDayHr = 4;
         int workingDays = 20;
+        int employeeHrs = 100;
         double dailySalary = 0;
         double monthlyWage = 0;
+        int totalEmpWage;
 
         Random random = new Random();
         int randomCheck = random.nextInt(3);
@@ -23,7 +25,10 @@ public class EmployeeWage {
             dailySalary = wagePerHr * fullDayHr;
             System.out.println("DailyWage :" + dailySalary);
             monthlyWage =(dailySalary * workingDays);
-            System.out.println("Empoloyee Monthly Salary is : " +monthlyWage );
+            System.out.println("Employee Monthly Salary is : " +monthlyWage );
+            totalEmpWage = employeeHrs * wagePerHr;
+            System.out.println("Total emp hours in 20 days is : " +totalEmpWage);
+
         }
         else if (randomCheck == isPartTIme) {
             System.out.println("is HalfDayPresent : ");
